@@ -1,0 +1,3 @@
+externalId: wf_icapi_data_pipeline
+ddescription: >
+  This workflow orchestrates the execution of tasks related to the ice cream data pipeline, including asset hierarchy creation, data point extraction, contextualization of time series assets, and OEE time series processing.
