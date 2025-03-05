@@ -166,3 +166,18 @@ def handle(client: CogniteClient = None, data=None):
             print(f"  {hours}h of Datapoints took {default_timer() - big_start:.2f} seconds")
         else:
             print(f"  No TimeSeries, for {hours}h of Datapoints took {default_timer() - big_start:.2f} seconds")
+
+    def handle(time_series):
+        try:
+            if time_series is not None:
+                for ts in time_series:
+                    # データ処理
+                    print(ts)
+            else:
+                raise ValueError("time_series is None")
+        except ValueError as e:
+            print(f"ValueError: {e}")
+            # 必要に応じてログを記録
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+            # その他の予期しないエラーを処理
